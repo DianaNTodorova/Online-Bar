@@ -9,3 +9,4 @@ export async function searchCocktails(name: string) {
   const res = await fetch(`${API_BASE}/search.php?s=${name}`);
   return res.json();
 }
+
