@@ -10,3 +10,7 @@ export async function searchCocktails(name: string) {
   return res.json();
 }
 
+export async function getCocktailById(id: string) {
+  const res = await fetch(`${API_BASE}/lookup.php?i=${id}`);
+  return res.json();
+}

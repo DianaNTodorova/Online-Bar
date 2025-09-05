@@ -34,7 +34,7 @@ export const Library = () => {
     {cocktails.length > 0 ? (
       cocktails.map((drink) => (
         <div className="col-md-4 mb-3" key={drink.idDrink}>
-          <Card img={drink.strDrinkThumb} title={drink.strDrink} />
+          <Card img={drink.strDrinkThumb} title={drink.strDrink} id={drink.idDrink}/>
         </div>
       ))
     ) : (
