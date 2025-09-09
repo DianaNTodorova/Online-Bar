@@ -7,4 +7,9 @@ export interface IDrink {
   strGlass?: string;
   strAlcoholic?: string;
   strImageAttribution?: string;
+  strIngredient?: IIngredient[];
+}
+
+export interface IIngredient{
+  strIngredient: string;
 }
