@@ -1,3 +1,8 @@
+*{
+  font-family: "Lato", sans-serif;
+  font-weight: 350;
+  font-style: normal;
+}
 .carousel{
     width:30vw;
     margin:auto;
@@ -12,4 +17,7 @@ img{
 h3{
     font-family: "Dancing Script", cursive;
     font-weight: 500;
+}
+.carousel-title{
+    text-shadow: 2px 2px 1px #0000008e;
 }

@@ -30,6 +30,7 @@ export const Search = ():ReactElement => {
           onChange={(e)=>setSearchTerm(e.target.value)}/>
           <button className="btn btn-outline-success" type="submit">Search</button>
     </form>
+       {cocktails.length > 0 ? <h3 className="m-4">--- Your Cocktail List ---</h3> : " "}
     <ul className="list-group list-group-flush d-flex w-50 m-auto mb-2">
         {cocktails.map((drink)=>(
             <Item key={drink.idDrink} title={drink.strDrink} id={drink.idDrink}/>

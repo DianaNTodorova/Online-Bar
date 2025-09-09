@@ -21,25 +21,28 @@ export const Library = () => {
             const data= await searchCocktails(search);
             setCocktails(Array.isArray(data.drinks)? data.drinks : []);
         }
+        
 
     return (
         <div className="container mt-3 text-center">
         <h3 className="library-title">--- Cocktail Library ---</h3>
         <form className="d-flex w-50 m-auto mb-2" role="search" onSubmit={handleSubmit}>
           <input className="form-control me-3" type="search" placeholder="Search cocktail by name" value={search} aria-label="Search" onChange={(e)=>setSearch(e.target.value)}/>
-          <button className="btn btn-outline-success" type="submit">Search</button>
+          <button className="btn btn-outline-success lato-font" type="submit">Search</button>
      </form>
   <div className="container mt-3">
+      {cocktails.length === 0 && search.length > 0 && (
+    <p className="text-center text-muted fs-5">No results found!</p>
+  )}
   <div className="row justify-content-center">
-    {cocktails.length > 0 ? (
+    {
       cocktails.map((drink) => (
         <div className="col-md-4 mb-3" key={drink.idDrink}>
           <Card img={drink.strDrinkThumb} title={drink.strDrink} id={drink.idDrink}/>
         </div>
       ))
-    ) : (
-      <p>No cocktails found.</p>
-    )}
+  }
+ 
   </div>
 </div>
         </div>
