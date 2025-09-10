@@ -1,0 +1,11 @@
+
+.page-link {
+  color: #198754 !important; 
+}
+
+/* Override active state */
+.page-item.active .page-link {
+  background-color: #198754 !important; 
+  border-color: #198754 !important;
+  color: white !important; 
+}

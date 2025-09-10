@@ -22,7 +22,7 @@ export const Info = () => {
   if (!cocktail) return <p>Loading...</p>;
 
   return (
-    <div className="card mb-3 m-auto mt-5" style={{ width: "80vh" }}>
+    <div className="card mb-3 m-auto mt-5" style={{ width: "100vh" }}>
       <div className="row g-0">
         <div className="col-md-5 d-flex justify-content-center align-items-center">
           <img

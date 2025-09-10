@@ -6,9 +6,10 @@ import { Library } from '../components/Library';
 export const Home = () => {
     return (
         <div>
-            <h1 className="text-center mt-3">Welcome to the Online Bar!</h1>
+            <h1 className="text-center pt-3">Welcome to the Online Bar!</h1>
             <Carousel />
             <Library />
+       
         </div>
     )
     }
