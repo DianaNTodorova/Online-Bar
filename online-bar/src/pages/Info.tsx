@@ -33,7 +33,7 @@ export const Info = () => {
         </div>
         <div className="col-md-7">
           <div className="card-body">
-            <h5 className="card-title text-center text-bold">-- {cocktail.strDrink} --</h5>
+            <h5 className="card-title text-center text-title">-- {cocktail.strDrink} --</h5>
             <div className="card-text ">
               <span className="text-bold"> Description:</span>
               <br />
