@@ -12,4 +12,5 @@ export interface IDrink {
 
 export interface IIngredient{
   strIngredient: string;
+  measure?: string;
 }

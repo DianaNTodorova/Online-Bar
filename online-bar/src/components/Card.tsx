@@ -11,7 +11,8 @@ export const Card = ({img , title, id }:CardProps):ReactElement => {
 
     return (
         <div className="card h-100" >
-        <img src={img} className="card-img-top" alt="..."/>
+        <div className="card-img-wrapper">
+        <img src={img} className="card-img-top zoom-img" alt="..."/></div>
         <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <Link to={`/cocktail/${id}`}>

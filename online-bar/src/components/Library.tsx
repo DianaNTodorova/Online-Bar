@@ -39,13 +39,13 @@ export const Library = () => {
           <button className="btn btn-outline-success lato-font" type="submit">Search</button>
      </form>
   <div className="container mt-3">
-      {cocktails.length === 0 && search.length > 0 && (
+      {cocktails.length === 0 && search.trim().length > 0 && (
     <p className="text-center text-muted fs-5">No results found!</p>
   )}
   <div className="row justify-content-center">
     {
       currentItems.map((drink) => (
-        <div className="col-md-4 mb-3" key={drink.idDrink}>
+        <div className="col-md-4 mb-4" key={drink.idDrink}>
           <Card img={drink.strDrinkThumb} title={drink.strDrink} id={drink.idDrink}/>
         </div>
       ))

@@ -40,16 +40,22 @@ export const Info = () => {
                 <p>{cocktail.strInstructions}</p>
             </div>
             <p className="card-text"><span className="text-bold">Type: </span> {cocktail.strAlcoholic}</p>
+            <p className="text-bold">Category: <span>{cocktail.strCategory}</span></p>
             <p className="text-bold">Ingredians:</p>
             <ul>
               {Array.from({length:15}, (_,i) => (cocktail as any)[`strIngredient${i+1}`]).filter(Boolean).map((ingredient, index) => (
                 <li key={index}>
                   {ingredient} 
                 </li>
-            
+              ))}</ul>
+              <p className="text-bold">Measurments:</p>
+              <div>
+              {Array.from({length:15}, (_,i) => (cocktail as any)[`strMeasure${i+1}`]).filter(Boolean).map((measure) => (
+                <span>⋮ {measure} </span>
               ))}
-            </ul>
-            <p className="card-text"><span className="material-symbols-outlined fs-4">
+              </div>
+            
+            <p className="card-text mt-3"><span className="material-symbols-outlined fs-4">
             local_bar</span>:{cocktail.strGlass}</p>
           </div>
         </div>
