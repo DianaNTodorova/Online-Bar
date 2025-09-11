@@ -34,10 +34,33 @@ export const Library = () => {
     return (
         <div className="container mt-3 text-center">
         <h3 className="library-title">--- Cocktail Library ---</h3>
-        <form className="d-flex w-50 m-auto mb-2" role="search" onSubmit={handleSubmit}>
-          <input className="form-control me-3" type="search" placeholder="Search cocktail by name" value={search} aria-label="Search" onChange={(e)=>setSearch(e.target.value)}/>
-          <button className="btn btn-outline-success lato-font" type="submit">Search</button>
-     </form>
+      <form
+  className="container mb-3"
+  role="search"
+  onSubmit={handleSubmit}
+>
+  <div className="row g-2 justify-content-center">
+ 
+    <div className="col-12 col-md-6">
+      <input
+        className="form-control"
+        type="search"
+        placeholder="Search cocktail by name"
+        value={search}
+        aria-label="Search"
+        onChange={(e) => setSearch(e.target.value)}
+      />
+    </div>
+
+
+    <div className="col-12 col-md-auto">
+      <button className="btn btn-outline-success lato-font w-100" type="submit">
+        Search
+      </button>
+    </div>
+  </div>
+</form>
+
   <div className="container mt-3">
       {cocktails.length === 0 && search.trim().length > 0 && (
     <p className="text-center text-muted fs-5">No results found!</p>

@@ -53,39 +53,43 @@ export const Search = (): ReactElement => {
   return (
     <div className="container mt-5 text-center">
       <form
-        className="w-50 m-auto mb-2 d-flex flex-column align-items-center"
-        role="search"
-        onSubmit={handleSubmit}
-      >
-    
-        <div className="d-flex w-100 mb-2">
-          <input
-            className="form-control me-3"
-            type="search"
-            placeholder="Search cocktail by name"
-            value={searchTerm}
-            aria-label="Search"
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button className="btn btn-outline-success" type="submit">
-            Search
-          </button>
-        </div>
+  className="container mb-3"
+  role="search"
+  onSubmit={handleSubmit}
+>
+  <div className="row g-2 justify-content-center">
+    <div className="col-12 col-md-8 d-flex">
+      <input
+        className="form-control me-2"
+        type="search"
+        placeholder="Search cocktail by name"
+        value={searchTerm}
+        aria-label="Search"
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
+      <button className="btn btn-outline-success lato-font" type="submit">
+        Search
+      </button>
+    </div>
 
- 
-        <select
-          className="form-select text-success"
-          id="inputGroupSelect01"
-          onChange={handleCategory}
-        >
-          <option value="">All Categories</option>
-          {categories.map((cat) => (
-            <option key={cat} value={cat}>
-              {cat}
-            </option>
-          ))}
-        </select>
-      </form>
+    <div className="col-12 col-md-8">
+      <select
+        className="form-select text-success"
+        id="inputGroupSelect01"
+        onChange={handleCategory}
+      >
+        <option value="">All Categories</option>
+        {categories.map((cat) => (
+          <option key={cat} value={cat}>
+            {cat}
+          </option>
+        ))}
+      </select>
+    </div>
+  </div>
+</form>
+
+
 
       {cocktails.length > 0 && <h3 className="m-4">--- Your Cocktail List ---</h3>}
 
